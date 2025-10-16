@@ -1,0 +1,124 @@
+:root {
+  --bg: #181c24;
+  --card-bg: #232b39;
+  --accent: #51a7ff;
+  --text: #e1e8ed;
+  --text-light: #b5bac7;
+  --border: #283040;
+  --tag-bg: #273447;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+header {
+  padding: 2rem 1rem 1rem 1rem;
+  text-align: center;
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border);
+}
+h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.accent {
+  color: var(--accent);
+}
+#filter-bar {
+  margin: 1rem 0 0 0;
+}
+#language-filter {
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 0.4em 1em;
+  border-radius: 4px;
+  font-size: 1em;
+  margin-left: 0.5em;
+}
+main {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+#repo-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+.repo-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem 1rem 1rem 1rem;
+  box-shadow: 0 2px 10px #0003;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  transition: border 0.2s;
+}
+.repo-card:hover {
+  border: 1.5px solid var(--accent);
+}
+.repo-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.2em;
+  color: var(--accent);
+  text-decoration: none;
+}
+.repo-title:hover {
+  text-decoration: underline;
+}
+.repo-desc {
+  color: var(--text-light);
+  font-size: 1em;
+  margin-bottom: 0.4em;
+}
+.repo-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  font-size: 0.95em;
+  color: var(--text-light);
+}
+.tag {
+  background: var(--tag-bg);
+  color: var(--accent);
+  padding: 0.2em 0.7em;
+  border-radius: 1em;
+  font-size: 0.85em;
+  margin-right: 0.3em;
+}
+footer {
+  text-align: center;
+  padding: 1.2rem 0;
+  background: var(--card-bg);
+  border-top: 1px solid var(--border);
+  color: var(--text-light);
+  font-size: 0.95em;
+  margin-top: 2rem;
+}
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 600px) {
+  main {
+    padding: 1rem 0.2rem;
+  }
+  #repo-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .repo-card {
+    padding: 1rem 0.6rem 0.6rem 0.6rem;
+  }
+}
